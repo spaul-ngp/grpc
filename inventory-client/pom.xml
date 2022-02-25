@@ -60,6 +60,7 @@
         <artifactId>protobuf-java</artifactId>
         <version>3.17.2</version>
     </dependency>
+	<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
     <dependency>
       <groupId>javax.annotation</groupId>
       <artifactId>javax.annotation-api</artifactId>
@@ -68,6 +69,7 @@
   </dependencies>
   <build>
     <extensions>
+	<!-- Extension to generate platform identifiers like [os.detected.classifier] used during build by grpc -->
       <extension>
         <groupId>kr.motd.maven</groupId>
         <artifactId>os-maven-plugin</artifactId>
