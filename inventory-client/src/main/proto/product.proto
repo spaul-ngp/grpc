@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+import "google/protobuf/wrappers.proto";
+
+package com.psl.grpc.gen.proto;
+
+message CustomerRecordRequest {
+    string firstName = 1;
+    string lastName = 2;
+}
+
+message CustomerRecordResponse {
+    string customerDetails = 1;
+}
+
+message CustomerRecordsResponse {
+    repeated CustomerRecordRequest records = 1;
+}
+
+service CustomerService {
+    rpc addCustomer(CustomerRecordRequest) returns (CustomerRecordResponse);
+    rpc getCustomer(google.protobuf.StringValue) returns (CustomerRecordRequest);
+}
